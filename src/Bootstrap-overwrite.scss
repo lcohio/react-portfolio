@@ -1,0 +1,42 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+// Variables
+
+$theme-white: #fff;
+$theme-dark: #c24242;
+$theme-light: #e37474;
+
+$grid-background: #f5f5f5;
+
+$cursive: 'Galada', cursive;
+
+.navbar-light {
+  background-color: $theme-dark;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: $theme-white;
+}
+
+.nav-link-custom {
+  color: $theme-white;
+  font-family: $cursive;
+  font-size: 20px;
+  text-align: center;
+  padding: 6px 40px;
+  text-decoration: none;
+  &:hover {
+    color: $theme-white;
+    transition: background-color .3s ease;
+    background-color: $theme-light;
+    text-decoration: none;
+  }
+}
+
+.active {
+  color: $theme-white;
+  transition: background-color .3s ease;
+  background-color: $theme-light;
+}

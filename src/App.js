@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Shell from './components/Shell';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Topnav from './components/Topnav';
+import Intro from './pages/Intro';
+import Tech from './pages/Tech';
+import Projects from './pages/Projects';
+import Personal from './pages/Personal';
+import Connect from './pages/Connect';
+import Success from './pages/Success';
+
+export default class App extends Component {
+
+  render() {
+    return (
+      <div className="App">
+        <Topnav />
+        <Switch>
+          <Route exact path="/" component={Shell(Intro)}></Route>
+          <Route path="/tech" exact component={Shell(Tech)}></Route>
+          <Route path="/projects" exact component={Shell(Projects)}></Route>
+          <Route path="/personal" exact component={Shell(Personal)}></Route>
+          <Route path="/connect" exact component={Shell(Connect)}></Route>
+          <Route path="/connect/success" exact component={Shell(Success)}></Route>
+          <Redirect to="/"></Redirect>
+        </Switch>
+      </div>
+    )
+  }
 }
 
-export default App;

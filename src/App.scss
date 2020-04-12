@@ -1,0 +1,378 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+// Variables
+
+$watermelon: #c24242;
+$grid-background: #f5f5f5;
+
+$cursive: 'Galada', cursive;
+
+// Placeholders
+%grid-container {
+  background-color: $grid-background;
+  opacity: .9;
+  width: 60%;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  font-family: $cursive;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    width: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .9;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+  }
+}
+
+%grid-item {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+%project-labels {
+  color: brown;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+%form-submit {
+  background-color: #c24242;
+  color: #fff;
+  font-family: 'Galada', cursive;
+  font-size: 18px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  transition: background-color .3s ease;
+}
+
+// Background
+
+body { 
+  background: url('./images/home2mob.jpeg');
+}
+
+// Intro page
+
+#intro-container {
+  @extend %grid-item;
+  height: 700px;
+}
+
+#intro-container h1 {
+  font-family: $cursive;
+  font-size: 132px;
+  font-weight: 300;
+  color: $watermelon;
+  margin-bottom: 30px;
+}
+
+// Technologies
+
+#tech-grid-container {
+  @extend %grid-container;
+}
+
+.tech-grid-item {
+  @extend %grid-item;
+  margin: 15px 0;
+  width: 200px;
+}
+
+.tech-img {
+  font-family: $cursive;
+  width: 100px;
+}
+
+.tech-desc {
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  color: brown;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+// Projects 
+
+#project-grid-container {
+  @extend %grid-container;
+}
+
+.project-grid-item {
+  @extend %grid-item;
+  padding: 20px;
+  &:first-child {
+    margin-top: 40px;
+  }
+}
+
+.projects-decorater {
+  @extend %project-labels;
+  font-size: 44px;
+}
+
+.project-name {
+  @extend %project-labels;
+}
+
+.live-link {
+  display: block;
+  text-align: center;
+}
+
+.project-thumbnail {
+  width: 150px;
+  height: 110px;
+  transition: transform .4s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Personal
+
+#personal {
+  font-family: $cursive;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 500px;
+  background-color: #f5f5f5;
+  opacity: .9;
+  border-radius: 2px;
+}
+
+#profile {
+  margin-top: 10px;
+  width: 90%;
+  height: 175px;
+  border-radius: 2px;
+}
+
+.profile-desc {
+  font-family: 'Inconsolata';
+  display: block;
+  text-align: left;
+  padding: 10px;
+  color: brown;
+  margin: 0 10px;
+}
+
+// Form
+
+#form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 350px;
+  background-color: #f5f5f5;
+  opacity: .9;
+  border-radius: 2px;
+}
+
+#connect {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#connect-headline {
+  font-family: 'Galada', cursive;
+  font-size: 48px;
+  color: #c24242;
+  margin: 0;
+  text-align: center;
+}
+
+#form-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+#form-row input {
+  width: 49%;
+  height: 30px;
+  border: 1px solid #000;
+  font-size: 16px;
+  color: #000;
+  border: 2px solid #c24242;
+  border-radius: 2px;
+}
+
+#form textarea {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  resize: none;
+  border: 2px solid #c24242;
+  border-radius: 2px;
+}
+
+#form-row input::placeholder,
+#form textarea::placeholder {
+  color: #000;
+  font-size: 14px;
+}
+
+#submit-warn {
+  @extend %form-submit;
+}
+
+#submit-btn {
+  @extend %form-submit;
+  padding: 15px 30px;
+  margin-bottom: 15px;
+  &:hover {
+    cursor: pointer;
+    background-color: #872020;
+  }
+}
+
+#success-container {
+  background-color: $grid-background;
+  text-align: center;
+  opacity: .9;
+  width: 60%;
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#success-message {
+  font-family: 'Galada', cursive;
+  font-size: 30px;
+  color: #c24242;
+}
+
+#success-return {
+  font-family: 'Galada', cursive;
+  font-size: 36px;
+  font-size: 24px;
+  padding: 8px 25px;
+  transition: background-color .2s ease;
+  background-color: #c24242;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+#success-return:hover {
+  background-color: #e37474;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #tech-grid-container {
+    position: absolute;
+    width: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .9;
+    grid-template-columns: auto auto auto;
+  }
+
+  .tech-grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #project-grid-container {
+    position: absolute;
+    width: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #f5f5f5;
+    opacity: .9;
+    border-radius: 2px;
+  }
+  
+  .project-grid-item {
+    &:first-child {
+      margin-top: 40px;
+    }
+  }
+
+  #personal {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background-color: #f5f5f5;
+    
+    border-radius: 2px;
+  }
+  
+  #profile {
+    margin-top: 10px;
+    width: 90%;
+    height: 200px;
+    border-radius: 2px;
+  }
+  
+  .profile-desc {
+    padding: 10px;
+    color: brown;
+  }
+
+  #form {
+    width: 400px;
+  }
+  
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-image: url('./images/home2.jpeg');
+    background-size: cover;
+  }
+}

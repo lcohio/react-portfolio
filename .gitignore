@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#emailJS api key
+/.env
+
 # testing
 /coverage
 

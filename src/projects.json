@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "project_name": "react gallery",
+    "live_link": "https://inspiring-yalow-a5e713.netlify.com/",
+    "target": "react-gallery.png"
+  },
+  {
+    "id": 1,
+    "project_name": "react api demo",
+    "live_link": "https://epic-carson-df9b63.netlify.com/",
+    "target": "react-api.png"
+  },
+  {
+    "id": 2,
+    "project_name": "fitness startup",
+    "live_link": "https://tellfisher.com",
+    "target": "tf-fitness.png"
+  },
+  {
+    "id": 3,
+    "project_name": "app dashboard",
+    "live_link": "https://elated-hugle-a03caa.netlify.com/",
+    "target": "app-dashboard.png"
+  },
+  {
+    "id": 4,
+    "project_name": "phrase hunter",
+    "live_link": "https://happy-ramanujan-33ec2f.netlify.com/",
+    "target": "phrase-hunter.png"
+  },
+  {
+    "id": 5,
+    "project_name": "vanilla api demo",
+    "live_link": "https://sharp-einstein-692d85.netlify.com/",
+    "target": "vanilla-api-demo.png"
+  },
+  {
+    "id": 6,
+    "project_name": "list pagination",
+    "live_link": "https://admiring-davinci-b6fa54.netlify.com/",
+    "target": "list-pagination.png"
+  },
+  {
+    "id": 7,
+    "project_name": "form validator",
+    "live_link": "https://quizzical-agnesi-eb6ec3.netlify.com/",
+    "target": "interactive-form.png"
+  }
+]

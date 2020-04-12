@@ -1,0 +1,47 @@
+[
+  {
+    "id": 0,
+    "desc": "html",
+    "target": "html.png"
+  },
+  {
+    "id": 1,
+    "desc": "css",
+    "target": "css.png"
+  },
+  {
+    "id": 2,
+    "desc": "javascript",
+    "target": "JS.png"
+  },
+  {
+    "id": 3,
+    "desc": "sass",
+    "target": "sass.png"
+  },
+  {
+    "id": 4,
+    "desc": "react",
+    "target": "react.png"
+  },
+  {
+    "id": 5,
+    "desc": "node.js",
+    "target": "node.png"
+  },
+  {
+    "id": 6,
+    "desc": "mySQL",
+    "target": "mySQL.png"
+  },
+  {
+    "id": 7,
+    "desc": "svn",
+    "target": "git.png"
+  },
+  {
+    "id": 8,
+    "desc": "visual studio",
+    "target": "vsc.png"
+  }
+]
